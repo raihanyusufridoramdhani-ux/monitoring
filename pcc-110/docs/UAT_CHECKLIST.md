@@ -1,0 +1,25 @@
+# UAT / Blackbox Checklist
+
+- [ ] Login operator berhasil.
+- [ ] Login pimpinan berhasil.
+- [ ] Password salah ditolak.
+- [ ] Input laporan menolak field wajib kosong.
+- [ ] Tiket dan nomor laporan unik.
+- [ ] Token laporan unik.
+- [ ] Link Pamapta membuka detail.
+- [ ] W4 hanya tercatat sekali.
+- [ ] Berangkat menyimpan W5.
+- [ ] Tiba menyimpan W6.
+- [ ] Selesai tidak bisa tanpa hasil.
+- [ ] Selesai tidak bisa tanpa foto.
+- [ ] Upload >5 foto ditolak.
+- [ ] MIME file non-gambar ditolak.
+- [ ] Tanda tangan tersimpan jika diisi.
+- [ ] Dashboard menampilkan KPI.
+- [ ] Dashboard polling 15 detik.
+- [ ] Chart response time muncul.
+- [ ] Chart volume muncul.
+- [ ] Export CSV berhasil.
+- [ ] Export PDF berhasil setelah `composer install`.
+- [ ] Audit log terisi.
+- [ ] SQL injection dasar diuji pada field pencarian.

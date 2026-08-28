@@ -1,0 +1,167 @@
+*{box-sizing:border-box} :root{
+--bg:#f2f5f8;--card:#fff;--ink:#0d1b2a;--navy:#11283f;--navy2:#091521;
+--muted:#6c7885;--border:#dbe2e8;--gold:#c9a227;--gold-soft:#f7edc7;
+--ok:#1d7a50;--ok-soft:#e9f7ef;--warn:#b56b00;--warn-soft:#fff3dd;
+--alert:#b42332;--alert-soft:#fdecef;--shadow:0 8px 30px rgba(13,27,42,.06)
+}
+html,body{margin:0;min-height:100%;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+body{font-size:14px}.app-shell{min-height:100vh;display:flex}.sidebar{width:250px;background:var(--navy2);color:#fff;padding:20px 16px;display:flex;flex-direction:column;position:fixed;inset:0 auto 0 0;z-index:20}
+.brand{display:flex;gap:12px;align-items:center;padding:8px 6px 22px;border-bottom:1px solid rgba(255,255,255,.1)}
+.brand-mark{width:44px;height:44px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:"Barlow Condensed";font-size:22px;font-weight:800}
+.brand-title{font-weight:800;letter-spacing:.05em}.brand-sub{font-size:9px;letter-spacing:.2em;color:#aab6c2;margin-top:2px}
+.nav{padding-top:18px;display:grid;gap:6px}.nav a{color:#c8d0d8;text-decoration:none;padding:11px 12px;border-left:2px solid transparent}.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.06);border-left-color:var(--gold)}
+.sidebar-foot{margin-top:auto;display:grid;gap:8px}.role-chip{display:inline-flex;width:max-content;padding:5px 8px;border:1px solid rgba(201,162,39,.5);color:var(--gold);font-size:10px;letter-spacing:.15em;font-weight:800}.main{margin-left:250px;width:calc(100% - 250px);min-height:100vh;padding:0 28px 40px}.public-main{margin-left:0;width:100%;display:flex;align-items:center;justify-content:center;padding:30px}
+.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);margin-bottom:24px}.eyebrow{font-family:"Barlow Condensed";font-size:11px;letter-spacing:.22em;color:var(--muted)}.topbar-title{font-size:19px;font-weight:800;margin-top:2px}.status-live{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--ok);display:flex;gap:7px;align-items:center}.status-live span{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.page-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:20px}.page-head h1{font-family:"Barlow Condensed";font-size:32px;line-height:.95;margin:0 0 6px;font-weight:800;color:var(--navy)}.page-head p{margin:0;color:var(--muted)}
+.grid{display:grid;gap:14px}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-main{display:grid;grid-template-columns:350px minmax(0,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);padding:18px;border-radius:8px}.card h2{margin:0 0 14px;font-family:"Barlow Condensed";font-size:16px;letter-spacing:.12em;color:var(--navy)}.stat{min-height:118px;display:flex;flex-direction:column;justify-content:space-between}.stat-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.stat-value{font-family:"Barlow Condensed";font-size:36px;font-weight:800;color:var(--navy)}.stat-note{font-size:11px;color:var(--muted)}.stat.ok .stat-value{color:var(--ok)}.stat.warn .stat-value{color:var(--warn)}.stat.alert .stat-value{color:var(--alert)}
+label{display:block;font-size:11px;font-weight:800;color:#40505f;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}input,select,textarea{width:100%;border:1px solid var(--border);background:#fff;color:var(--ink);padding:11px 12px;border-radius:6px;outline:none}input:focus,select:focus,textarea:focus{border-color:#8293a5;box-shadow:0 0 0 3px rgba(17,40,63,.06)}textarea{min-height:110px;resize:vertical}.field{margin-bottom:13px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.btn{border:1px solid transparent;border-radius:6px;padding:10px 14px;font-weight:800;font-size:12px;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:7px;cursor:pointer}.btn-primary{background:var(--navy);color:#fff}.btn-gold{background:var(--gold);color:#17202a}.btn-outline{background:#fff;border-color:var(--border);color:var(--navy)}.btn-ghost{background:transparent;border-color:rgba(255,255,255,.15);color:#dbe4ec}.btn-danger{background:var(--alert);color:#fff}.btn-ok{background:var(--ok);color:#fff}.btn-block{width:100%}.actions{display:flex;flex-wrap:wrap;gap:8px}.flash{margin:12px 0;padding:11px 13px;border-radius:6px;font-size:12px;font-weight:700}.flash.success{background:var(--ok-soft);color:var(--ok)}.flash.error{background:var(--alert-soft);color:var(--alert)}.flash.info{background:#edf3f8;color:var(--navy)}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:8px}.table{width:100%;border-collapse:collapse;background:#fff}.table th,.table td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}.table th{background:#f8fafb;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.table td{font-size:12px}.table tr:last-child td{border-bottom:0}.mono{font-family:"JetBrains Mono",monospace}.badge{display:inline-flex;align-items:center;padding:4px 7px;border-radius:999px;font-size:10px;font-weight:800}.badge.ok{background:var(--ok-soft);color:var(--ok)}.badge.warn{background:var(--warn-soft);color:var(--warn)}.badge.alert{background:var(--alert-soft);color:var(--alert)}.badge.muted{background:#edf0f3;color:#66737f}.priority-high{color:var(--alert);font-weight:800}.priority-mid{color:var(--warn);font-weight:800}.priority-low{color:var(--ok);font-weight:800}.muted{color:var(--muted)}.small{font-size:11px}.eyebrow2{font-size:10px;letter-spacing:.18em;color:var(--muted);font-weight:800}
+.timeline{display:grid;gap:0}.timeline-row{display:grid;grid-template-columns:105px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}.timeline-row:last-child{border-bottom:0}.timeline-key{font-size:10px;font-weight:800;color:var(--muted)}.timeline-val{font-family:"JetBrains Mono";font-size:11px}.login-card{width:min(440px,100%);background:#fff;border:1px solid var(--border);padding:28px;box-shadow:var(--shadow);border-radius:10px}.login-logo{width:62px;height:62px;border:2px solid var(--gold);display:grid;place-items:center;font-family:"Barlow Condensed";font-size:29px;font-weight:800;color:var(--gold);background:var(--navy2);margin-bottom:18px}.login-card h1{font-family:"Barlow Condensed";font-size:34px;margin:0;color:var(--navy);line-height:1}.login-card p{color:var(--muted);font-size:12px;line-height:1.7}.login-meta{margin-top:18px;padding:10px;background:#f7f9fa;font-size:10px;color:var(--muted);border-left:3px solid var(--gold)}
+.chart-box{height:290px}.chart-box canvas{width:100%!important;height:100%!important}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters>*{max-width:210px}.kpi-inline{display:flex;gap:18px;flex-wrap:wrap}.kpi-inline div{min-width:110px}.kpi-inline strong{display:block;font-family:"Barlow Condensed";font-size:24px;color:var(--navy)}.kpi-inline span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.dropzone{border:1px dashed #aebbc6;padding:14px;background:#fafcfd;border-radius:6px}.photos{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.photo{aspect-ratio:1;background:#edf1f4;border:1px solid var(--border);border-radius:5px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.signature-wrap{border:1px solid var(--border);background:#fff;border-radius:6px}.signature-wrap canvas{width:100%;height:180px;touch-action:none}.mobile-card{max-width:720px;width:100%;margin:0 auto}.mobile-head{background:var(--navy2);color:#fff;padding:18px;border-radius:9px 9px 0 0}.mobile-body{background:#fff;border:1px solid var(--border);border-top:0;padding:18px;border-radius:0 0 9px 9px}.mobile-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mobile-actions .btn{min-height:54px}.step{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--border)}.step:last-child{border-bottom:0}.step-dot{width:9px;height:9px;border-radius:50%;background:#c6d0d8}.step.done .step-dot{background:var(--ok)}.step.current .step-dot{background:var(--gold)}.step span{font-size:11px}.empty{padding:35px;text-align:center;color:var(--muted)}.footer-note{margin-top:20px;color:var(--muted);font-size:10px;text-align:center}
+@media(max-width:1050px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-main{grid-template-columns:1fr}.sidebar{width:220px}.main{margin-left:220px;width:calc(100% - 220px)}}
+@media(max-width:760px){.app-shell{display:block}.sidebar{position:static;width:100%;min-height:auto}.sidebar-foot{display:none}.nav{grid-template-columns:1fr 1fr}.main{margin-left:0;width:100%;padding:0 14px 28px}.topbar{height:auto;padding:15px 0;align-items:flex-start;gap:12px}.topbar-title{font-size:16px}.status-live{font-size:8px}.grid-4,.grid-3,.grid-2,.form-grid{grid-template-columns:1fr}.page-head{display:block}.page-head .actions{margin-top:12px}.mobile-actions{grid-template-columns:1fr}.table-wrap{margin-left:-1px;margin-right:-1px}.card{padding:14px}.filters>*{max-width:none;width:100%}.photos{grid-template-columns:repeat(3,1fr)}}
+
+/* =========================================================
+   PCC-110 - LOGO INSTANSI
+   FINAL VERSION
+   ========================================================= */
+
+/* ---------- LOGIN ---------- */
+
+.pcc-login-logo-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+
+    width: 100% !important;
+    max-width: 210px !important;
+
+    margin: 0 auto 12px !important;
+    padding: 0 !important;
+}
+
+.pcc-login-logo-row img {
+    flex: 0 0 auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Tribrata */
+.pcc-login-logo-row .pcc-logo-tribrata {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/* Polda Jawa Tengah */
+.pcc-login-logo-row .pcc-logo-polda {
+    width: 46px !important;
+    height: 46px !important;
+}
+
+/* LIBAS */
+.pcc-login-logo-row .pcc-logo-libas {
+    width: 52px !important;
+    height: 50px !important;
+}
+
+
+/* ---------- SIDEBAR OPERATOR & PIMPINAN ---------- */
+
+.pcc-sidebar-logos {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+
+    gap: 6px !important;
+
+    margin: 0 auto 10px !important;
+    padding: 0 4px !important;
+
+    box-sizing: border-box !important;
+}
+
+.pcc-sidebar-logos img {
+    flex: 0 0 auto !important;
+    display: block !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Tribrata */
+.pcc-sidebar-logos .pcc-logo-tribrata {
+    width: 42px !important;
+    height: 42px !important;
+}
+
+/* Polda */
+.pcc-sidebar-logos .pcc-logo-polda {
+    width: 39px !important;
+    height: 39px !important;
+}
+
+/* LIBAS */
+.pcc-sidebar-logos .pcc-logo-libas {
+    width: 44px !important;
+    height: 42px !important;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 576px) {
+
+    .pcc-login-logo-row {
+        gap: 7px !important;
+        max-width: 175px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .pcc-login-logo-row .pcc-logo-tribrata {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .pcc-login-logo-row .pcc-logo-polda {
+        width: 39px !important;
+        height: 39px !important;
+    }
+
+    .pcc-login-logo-row .pcc-logo-libas {
+        width: 44px !important;
+        height: 42px !important;
+    }
+
+    .pcc-sidebar-logos {
+        gap: 4px !important;
+    }
+
+    .pcc-sidebar-logos .pcc-logo-tribrata {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .pcc-sidebar-logos .pcc-logo-polda {
+        width: 33px !important;
+        height: 33px !important;
+    }
+
+    .pcc-sidebar-logos .pcc-logo-libas {
+        width: 37px !important;
+        height: 35px !important;
+    }
+}
